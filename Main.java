@@ -9,7 +9,12 @@ public class Main {
 
         System.out.println("Enter 1 to add employee");
         System.out.println("Enter 2 to find employee by ID");
-        System.out.println("Enter 3 to exit");
+        System.out.println("Enter 3 to view all employees");
+        System.out.println("Enter 4 to delete employee by ID");
+        System.out.println("Enter 5 to update employee by ID !!(Currently not supported)!!");
+        System.out.println("Enter 6 to clear all employees");
+        System.out.println("Enter 7 to exit");
+
         System.out.println();
 //        addEmployee();
 //
@@ -34,7 +39,7 @@ public class Main {
 
                     int option = scanner.nextInt();
 
-                    if (option < 1 || option > 5) {
+                    if (option < 1 || option > 7) {
                         System.out.println("Invalid option!");
                         continue;
                     }
@@ -51,16 +56,26 @@ public class Main {
                                 System.out.println(e.getMessage());
                             }
                             break;
-                        case 4:
+                        case 3:
                             viewAllEmployees();
                             break;
-                        case 5:
+                        case 4:
                             try {
                                 deleteEmployeeById();
                             }catch (EmployeeNotFoundException e){
                                 System.out.println(e.getMessage());
                             }
-                        case 3:
+                            break;
+//                        case 5:
+//                            try {
+//                                updateEmployeeById();
+//                            }catch (RuntimeException e){
+//                                System.out.println(e.getMessage());
+//                            }
+                        case 6:
+                            clearList();
+                            break;
+                        case 7:
                             exit = false;
                             break;
 

@@ -193,4 +193,73 @@ public class EmployeeService {
             }
         }
     }
+
+    static void clearList(){
+        employees.clear();
+        System.out.println("All Employees cleared successfully!");
+    }
+
+//    static void updateEmployeeById() throws RuntimeException{
+//        System.out.println("Update Employee by ID");
+//        System.out.println("======================");
+//        System.out.println("Enter ID to update data: ");
+//        int id = 0;
+//        try {
+//             id = scanner.nextInt();
+//             scanner.nextLine();
+//        }catch (InputMismatchException e){
+//            System.out.println("Please enter a valid numerical value.");
+//            scanner.nextLine();
+//            return;
+//        }
+//        try {
+//            for(Employee emp : employees){
+//                if (emp.getId() == id){
+//                    System.out.println("Enter new data: ");
+//                    System.out.print("Enter Name: ");
+//                    String name = scanner.nextLine();
+//                    emp.setName(name);
+//                    System.out.print("Enter Salary: ");
+//                    double salary = scanner.nextDouble();
+//                    emp.setSalary(salary);
+//                    System.out.println("Employee updated successfully!");
+//                    return;
+//                }
+//            }
+//        } catch (InputMismatchException e){
+//            System.out.println(e.getMessage());
+//        } catch (RuntimeException e) {
+//            throw new RuntimeException(e);
+//        }
+
+//        boolean found = false;
+//        for (Employee emp : employees) {
+//            if (emp.getId() == id) {
+//                found = true;
+//                System.out.println("Enter new data:");
+//
+//                System.out.print("Enter Name: ");
+//                String name = scanner.nextLine();
+//                emp.setName(name);
+//
+//                System.out.print("Enter Salary: ");
+//                try {
+//                    double salary = scanner.nextDouble();
+//                    emp.setSalary(salary);
+//                    scanner.nextLine(); // Consume leftover newline
+//                } catch (InputMismatchException e) {
+//                    System.out.println("Invalid salary input. Please enter a numeric value.");
+//                    scanner.nextLine(); // Clear invalid input
+//                    return; // Exit the method
+//                }
+//
+//                System.out.println("Employee updated successfully!");
+//                break;
+//            }
+//        }
+//
+//        if (!found) {
+//            System.out.println("Employee with ID " + id + " not found.");
+//        }
+//    }
 }
